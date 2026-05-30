@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Scripts</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111827;
+    color:white;
+}
+
+header{
+    background:#1f2937;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    color:#00ff88;
+}
+.link-card{
+    background:#1f2937;
+    max-width:500px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.script-card{
+    background:#1f2937;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+.script-card h2{
+    color:#00ff88;
+    margin-bottom:10px;
+}
+
+.script-card p{
+    margin-bottom:15px;
+}
+
+pre{
+    background:#0f172a;
+    padding:15px;
+    border-radius:8px;
+    overflow:auto;
+}
+
+button{
+    margin-top:10px;
+    background:#00ff88;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#00cc6a;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1f2937;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>LeiZee</h1>
+    <p>Discover Roblox scripts</p>
+</header>
+
+<div class="container">
+
+    <div class="script-card">
+        <h2>Build a Ring Farm Script</h2>
+<pre id="script1">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Omnie7/Luxy-Hub/refs/heads/main/main.lua"))()
+</pre>
+
+        <button onclick="copyScript('script1')">Copy Script</button>
+    </div>
+
+<footer>
+    <div class="link-card">
+    <h2>Get More Roblox Script</h2>
+    <p>Click below to visit.</p>
+    <button onclick="window.open('https://lei-zee-hub.vercel.app/?_vercel_share=MeAp8xcOrdJorH97Fi1HCLkIWdMqfjfj', '_blank')">
+        Visit Site
+    </button>
+</div>
+
+</footer>
+
+<script>
+function copyScript(id){
+    const text = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(text)
+    .then(()=>{
+        alert("Script copied!");
+    });
+}
+</script>
+
+</body>
+</html>
